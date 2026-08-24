@@ -12,6 +12,7 @@ left = fun t: 1st rest t,
 
 right = fun t: 1st rest rest t,
 
+\ search(t, v) = search value v in tree t, returns 1 if found or 0 if not found
 search = fun t v:
     if empty t then 0
         else
@@ -19,7 +20,9 @@ search = fun t v:
         else
     if value(t) < v then search(right(t), v)
         else
-    value(t) = v
+    value(t) = v,
+
+
 
 in search([5, [2, [1, nil, nil], [3, nil, nil]], [8, nil, [9, nil, nil]]], 3)
 
