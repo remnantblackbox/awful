@@ -1,0 +1,26 @@
+\ BST simple implementation
+
+\ Each node is defined as a triple [value, left, right] where left and right can be represented
+\ as other nodes like [value, [value, nil, nil], [value, nil, nil]]
+letrec
+
+node = fun v l r: [v, l, r],
+
+value = fun t: 1st t,
+
+left = fun t: 1st rest t,
+
+right = fun t: 1st rest rest t,
+
+search = fun t v:
+    if empty t then 0
+        else
+    if value(t) > v then search(left(t), v)
+        else
+    if value(t) < v then search(right(t), v)
+        else
+    value(t) = v
+
+in search([5, [2, [1, nil, nil], [3, nil, nil]], [8, nil, [9, nil, nil]]], 3)
+
+
