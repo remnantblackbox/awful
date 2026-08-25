@@ -186,10 +186,10 @@ The only constant of stack type is `NIL`, that represents the empty stack. A sta
 Each data type comes with a set of built-in functions. For numbers we have:
 
 - `ADD x y` that takes two numbers and returns their sum `x + y`.
-- `SUB x y` that takes two numbers and returns their sum `x + y`.
-- `MUL x y` that takes two numbers and returns their sum `x + y`.
-- `DIV x y` that takes two numbers and returns their sum `x + y`.
-- `POW x y` that takes two numbers and returns their sum `x + y`.
+- `SUB x y` that takes two numbers and returns their difference `x - y`.
+- `MUL x y` that takes two numbers and returns their product `x * y`.
+- `DIV x y` that takes two numbers and returns their quotient `x / y`.
+- `POW x y` that takes two numbers and returns `x` raised to the power `y`, i.e. `x ^ y`.
 
 The argument of a function can be anything returning a value: for example we can nest arithmetical operators such as
 
