@@ -181,7 +181,7 @@ def parse_sum(c):
     retval, c = parse_prod(c)
     if len(c) > 0 and (tok := c[0][0]) in ["+", "-", ":"]:
         s, c = parse_prod(c[1:])
-        retval = ("ADD " if tok == "+" else "SUB" \
+        retval = ("ADD " if tok == "+" else "SUB " \
             if tok == "-" else "PUSH ") + retval + " " + s \
             + (" NIL" if tok == "PUSH" else "")
     return retval, c
